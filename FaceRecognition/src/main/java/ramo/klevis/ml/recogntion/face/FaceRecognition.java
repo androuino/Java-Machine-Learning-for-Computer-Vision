@@ -10,15 +10,18 @@ import org.deeplearning4j.nn.workspace.LayerWorkspaceMgr;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.indexing.NDArrayIndex;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import ramo.klevis.ml.recogntion.face.ui.FaceRecogntionUI;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@Slf4j
+//@Slf4j
 public class FaceRecognition {
-
+    private static final Logger log = LoggerFactory.getLogger(FaceRecognition.class);
     private static final double THRESHOLD = 0.57;
     private FaceNetSmallV2Model faceNetSmallV2Model;
     private ComputationGraph computationGraph;

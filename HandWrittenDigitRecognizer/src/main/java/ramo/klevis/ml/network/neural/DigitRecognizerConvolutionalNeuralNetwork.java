@@ -22,6 +22,8 @@ import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ramo.klevis.ml.LabeledImage;
 
 import java.io.File;
@@ -30,9 +32,9 @@ import java.io.IOException;
 /**
  * Created by Klevis Ramo.
  */
-@Slf4j
+//@Slf4j
 public class DigitRecognizerConvolutionalNeuralNetwork {
-
+    private static final Logger log = LoggerFactory.getLogger(DigitRecognizerConvolutionalNeuralNetwork.class);
     private static final String OUT_DIR = "HandWrittenDigitRecognizer/src/main/resources/cnnCurrentTrainingModels";
     private static final String TRAINED_MODEL_FILE = "HandWrittenDigitRecognizer/src/main/resources/cnnTrainedModels/bestModel.bin";
     private MultiLayerNetwork preTrainedModel;

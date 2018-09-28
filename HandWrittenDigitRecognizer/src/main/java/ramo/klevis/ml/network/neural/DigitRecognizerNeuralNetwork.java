@@ -16,6 +16,8 @@ import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ramo.klevis.ml.LabeledImage;
 
 import java.io.File;
@@ -24,9 +26,9 @@ import java.io.IOException;
 /**
  * Created by Klevis Ramo
  */
-@Slf4j
+//@Slf4j
 public class DigitRecognizerNeuralNetwork {
-
+    private static final Logger log = LoggerFactory.getLogger(DigitRecognizerNeuralNetwork.class);
     private static final String OUTPUT_DIRECTORY = "HandWrittenDigitRecognizer/src/main/resources/trainedModel.zip";
 
     /**

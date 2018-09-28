@@ -20,6 +20,8 @@ import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,10 +37,10 @@ import static ramo.klevis.ml.vg16.DataStorage.TRAIN_DIRECTORY_PATH;
 /**
  * Created by Klevis Ramo.
  */
-@Slf4j
+//@Slf4j
 public class TransferLearningVGG16 {
 
-
+    private static final Logger log = LoggerFactory.getLogger(TransferLearningVGG16.class);
     private static final int SAVING_INTERVAL = 100;
 
     /**

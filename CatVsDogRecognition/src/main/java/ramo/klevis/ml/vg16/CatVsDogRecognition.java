@@ -7,6 +7,9 @@ import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.VGG16ImagePreProcessor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import ramo.klevis.ml.RunCatVsDogRecognizer;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,8 +18,9 @@ import java.io.IOException;
 /**
  * Created by Klevis Ramo
  */
-@Slf4j
+//@Slf4j
 public class CatVsDogRecognition {
+    private static final Logger log = LoggerFactory.getLogger(CatVsDogRecognition.class);
     public static final String TRAINED_PATH_MODEL = DataStorage.DATA_PATH + "/model.zip";
     private ComputationGraph computationGraph;
 

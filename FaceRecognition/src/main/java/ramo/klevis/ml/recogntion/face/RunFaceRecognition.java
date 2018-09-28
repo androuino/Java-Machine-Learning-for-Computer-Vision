@@ -1,6 +1,8 @@
 package ramo.klevis.ml.recogntion.face;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ramo.klevis.ml.recogntion.face.ui.FaceRecogntionUI;
 import ramo.klevis.ml.ui.ProgressBar;
 
@@ -11,9 +13,9 @@ import java.util.concurrent.Executors;
 /**
  * Created by Klevis Ramo
  */
-@Slf4j
+//@Slf4j
 public class RunFaceRecognition {
-
+    private static final Logger log = LoggerFactory.getLogger(RunFaceRecognition.class);
     public static void main(String[] args) throws Exception {
 
         JFrame mainFrame = new JFrame();

@@ -7,6 +7,8 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.learning.AdamUpdater;
 import org.nd4j.linalg.learning.config.Adam;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,9 +25,9 @@ import java.util.concurrent.Executors;
  *
  * @author Klevis Ramo&Jacob Schrum
  */
-@Slf4j
+//@Slf4j
 public class NeuralStyleTransfer {
-
+    private static final Logger log = LoggerFactory.getLogger(NeuralStyleTransfer.class);
     public static final String[] STYLE_LAYERS = new String[]{
             "block1_conv1,0.5",
             "block2_conv1,1.0",

@@ -2,6 +2,8 @@ package ramo.klevis.ml.recogntion.face.ui;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ramo.klevis.ml.recogntion.face.FaceRecognition;
 import ramo.klevis.ml.ui.ImagePanel;
 
@@ -18,8 +20,9 @@ import java.util.Objects;
 /**
  * Created by Klevis Ramo
  */
-@Slf4j
+//@Slf4j
 public class FaceRecogntionUI {
+    private static final Logger log = LoggerFactory.getLogger(FaceRecogntionUI.class);
     public static final String FACE_RECOGNITION_SRC_MAIN_RESOURCES = "FaceRecognition/src/main/resources/images";
     private static final String BASE_PATH = "FaceRecognition/src/main/resources/";
     private JFrame mainFrame;

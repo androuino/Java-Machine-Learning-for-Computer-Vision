@@ -1,6 +1,8 @@
 package ramo.klevis.ml.ui;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ramo.klevis.ml.EdgeDetection;
 
 import javax.imageio.ImageIO;
@@ -17,9 +19,9 @@ import static ramo.klevis.ml.EdgeDetection.*;
 /**
  * Created by Klevis Ramo
  */
-@Slf4j
+//@Slf4j
 public class EdgeDetectionUI {
-
+    private static final Logger log = LoggerFactory.getLogger(EdgeDetectionUI.class);
     private static final int FRAME_WIDTH = 1000;
     private static final int FRAME_HEIGHT = 600;
     private static final Font sansSerifBold = new Font("SansSerif", Font.BOLD, 22);

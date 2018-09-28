@@ -12,6 +12,8 @@ import org.deeplearning4j.zoo.model.TinyYOLO;
 import org.deeplearning4j.zoo.model.YOLO2;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -26,9 +28,9 @@ import static org.bytedeco.javacpp.opencv_core.*;
 import static org.bytedeco.javacpp.opencv_imgproc.putText;
 import static org.bytedeco.javacpp.opencv_imgproc.rectangle;
 
-@Slf4j
+//@Slf4j
 public class Yolo {
-
+    private static final Logger log = LoggerFactory.getLogger(Yolo.class);
     private static final double DETECTION_THRESHOLD = 0.5;
     //more accurate but slower
     public static ComputationGraph YOLO_V2_MODEL_PRE_TRAINED;

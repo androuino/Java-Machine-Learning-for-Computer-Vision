@@ -14,4 +14,21 @@ public class NeuralNetworkTrainingData {
     private final DataSetIterator devIterator;
     private final DataSetIterator testIterator;
 
+    public NeuralNetworkTrainingData(DataSetIterator trainIterator, DataSetIterator devIterator, DataSetIterator testIterator) {
+        this.trainIterator = trainIterator;
+        this.devIterator = devIterator;
+        this.testIterator = testIterator;
+    }
+
+    public DataSetIterator getTrainIterator() {
+        return trainIterator;
+    }
+
+    public DataSetIterator getDevIterator() {
+        return devIterator;
+    }
+
+    public DataSetIterator getTestIterator() {
+        return testIterator;
+    }
 }

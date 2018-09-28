@@ -2,6 +2,8 @@ package ramo.klevis.ml;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ramo.klevis.ml.ui.ProgressBar;
 import ramo.klevis.ml.ui.CatVsDogUI;
 
@@ -19,9 +21,9 @@ import static ramo.klevis.ml.vg16.CatVsDogRecognition.TRAINED_PATH_MODEL;
 /**
  * Created by Klevis Ramo
  */
-@Slf4j
+//@Slf4j
 public class RunCatVsDogRecognizer {
-
+    private static final Logger log = LoggerFactory.getLogger(RunCatVsDogRecognizer.class);
     private static final String MODEL_URL = "https://dl.dropboxusercontent.com/s/djmh91tk1bca4hz/RunEpoch_class_2_soft_10_32_1800.zip?dl=0";
 
     public static void main(String[] args) throws Exception {

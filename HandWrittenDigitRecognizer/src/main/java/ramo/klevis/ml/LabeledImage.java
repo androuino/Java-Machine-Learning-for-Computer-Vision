@@ -14,7 +14,7 @@ public class LabeledImage implements Serializable {
     private final double label;
 
     public LabeledImage(int label, double[] pixels) {
-        normalizedPixels = normalizePixels(pixels);
+        this.normalizedPixels = normalizePixels(pixels);
         this.pixels = pixels;
         this.label = label;
     }
@@ -31,6 +31,10 @@ public class LabeledImage implements Serializable {
             pixelsNorm[i] = pixels[i] / 255d;
         }
         return pixelsNorm;
+    }
+
+    public double[] getNormalizedPixels() {
+        return normalizedPixels;
     }
 
     @Override

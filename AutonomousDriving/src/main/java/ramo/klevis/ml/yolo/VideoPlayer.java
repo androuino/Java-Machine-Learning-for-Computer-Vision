@@ -6,14 +6,16 @@ import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.Frame;
 import org.bytedeco.javacv.FrameGrabber;
 import org.bytedeco.javacv.OpenCVFrameConverter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.bytedeco.javacpp.opencv_highgui.*;
 
-@Slf4j
+//@Slf4j
 public class VideoPlayer {
-
+    private static final Logger log = LoggerFactory.getLogger(VideoPlayer.class);
     private static final String AUTONOMOUS_DRIVING_RAMOK_TECH = "Autonomous Driving(ramok.tech)";
     private String windowName;
     private volatile boolean stop = false;
